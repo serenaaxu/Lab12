@@ -1,4 +1,7 @@
 from database.DB_connect import DBConnect
+from model.rifugio import Rifugio
+from model.sentiero import Sentiero
+
 
 class DAO:
     """

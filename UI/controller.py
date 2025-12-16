@@ -49,3 +49,11 @@ class Controller:
     """Implementare la parte di ricerca del cammino minimo"""
     # TODO
 
+    def handle_cammino_minimo(self, e):
+        percorsi_minimi_assoluti = self._model.cammino_minimo()
+
+        for sorgente, dest, path, costo in percorsi_minimi_assoluti:
+            self._view.lista_visualizzazione_3.controls.clear()
+            self._view.lista_visualizzazione_3.controls.append(ft.Text(f"Sorgente: {sorgente}, Destinazione: {dest}, Percorso: {path}, Costo: {costo}"))
+        self._view.page.update()
+
